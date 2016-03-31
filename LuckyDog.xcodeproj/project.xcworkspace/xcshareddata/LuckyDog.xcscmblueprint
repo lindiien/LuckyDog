@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0FB1E4F39685F03AAC8F8FF24F1666D3408B237E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0FB1E4F39685F03AAC8F8FF24F1666D3408B237E" : 0,
+    "25E73D7562CC027932F023FFC6C0002DD4DF61F0" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E7C1DA2C-55F8-4B57-BA43-54BE9B0BC178",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0FB1E4F39685F03AAC8F8FF24F1666D3408B237E" : "LuckyDog\/",
+    "25E73D7562CC027932F023FFC6C0002DD4DF61F0" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LuckyDog",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LuckyDog.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lindiien\/LuckyDog.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0FB1E4F39685F03AAC8F8FF24F1666D3408B237E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lindiien\/Slot-Machine-.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "25E73D7562CC027932F023FFC6C0002DD4DF61F0"
+    }
+  ]
+}

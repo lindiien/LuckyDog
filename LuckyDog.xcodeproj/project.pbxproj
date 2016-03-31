@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0541B0101CAD98DA004E65CD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0541B00D1CAD98DA004E65CD /* FBSDKCoreKit.framework */; };
+		0541B0111CAD98DA004E65CD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0541B00E1CAD98DA004E65CD /* FBSDKLoginKit.framework */; };
+		0541B0121CAD98DA004E65CD /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0541B00F1CAD98DA004E65CD /* FBSDKShareKit.framework */; };
+		0541B0141CAD9B7D004E65CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0131CAD9B7D004E65CD /* LoginViewController.swift */; };
 		05DC875D1CAD846700A1A7F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */; };
 		05DC875F1CAD846700A1A7F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875E1CAD846700A1A7F3 /* ViewController.swift */; };
 		05DC87621CAD846700A1A7F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DC87601CAD846700A1A7F3 /* Main.storyboard */; };
@@ -54,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0541B00D1CAD98DA004E65CD /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		0541B00E1CAD98DA004E65CD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		0541B00F1CAD98DA004E65CD /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		0541B0131CAD9B7D004E65CD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		05DC87591CAD846700A1A7F3 /* LuckyDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05DC875E1CAD846700A1A7F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +105,8 @@
 			files = (
 				05DC87B61CAD888B00A1A7F3 /* libsqlite3.tbd in Frameworks */,
 				05DC87B41CAD888200A1A7F3 /* libz.tbd in Frameworks */,
+				0541B0111CAD98DA004E65CD /* FBSDKLoginKit.framework in Frameworks */,
+				0541B0101CAD98DA004E65CD /* FBSDKCoreKit.framework in Frameworks */,
 				05DC87B21CAD887A00A1A7F3 /* SystemConfiguration.framework in Frameworks */,
 				05DC87B01CAD887200A1A7F3 /* StoreKit.framework in Frameworks */,
 				05DC87AE1CAD886C00A1A7F3 /* Security.framework in Frameworks */,
@@ -105,6 +115,7 @@
 				05DC87A81CAD885A00A1A7F3 /* CoreGraphics.framework in Frameworks */,
 				05DC87A61CAD884F00A1A7F3 /* CFNetwork.framework in Frameworks */,
 				05DC87A41CAD884B00A1A7F3 /* AudioToolbox.framework in Frameworks */,
+				0541B0121CAD98DA004E65CD /* FBSDKShareKit.framework in Frameworks */,
 				05DC87A21CAD878C00A1A7F3 /* ParseUI.framework in Frameworks */,
 				05DC879E1CAD878C00A1A7F3 /* Parse.framework in Frameworks */,
 				05DC879D1CAD878C00A1A7F3 /* Bolts.framework in Frameworks */,
@@ -188,6 +199,9 @@
 		05DC878D1CAD848600A1A7F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0541B00D1CAD98DA004E65CD /* FBSDKCoreKit.framework */,
+				0541B00E1CAD98DA004E65CD /* FBSDKLoginKit.framework */,
+				0541B00F1CAD98DA004E65CD /* FBSDKShareKit.framework */,
 				05DC87B51CAD888B00A1A7F3 /* libsqlite3.tbd */,
 				05DC87B31CAD888200A1A7F3 /* libz.tbd */,
 				05DC87B11CAD887A00A1A7F3 /* SystemConfiguration.framework */,
@@ -222,6 +236,7 @@
 			children = (
 				05DC875E1CAD846700A1A7F3 /* ViewController.swift */,
 				05DC87951CAD85C900A1A7F3 /* CardsViewController.swift */,
+				0541B0131CAD9B7D004E65CD /* LoginViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -366,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0541B0141CAD9B7D004E65CD /* LoginViewController.swift in Sources */,
 				05DC87651CAD846700A1A7F3 /* LuckyDog.xcdatamodeld in Sources */,
 				05DC875F1CAD846700A1A7F3 /* ViewController.swift in Sources */,
 				05DC87961CAD85C900A1A7F3 /* CardsViewController.swift in Sources */,
