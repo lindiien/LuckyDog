@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05DC875D1CAD846700A1A7F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */; };
+		05DC875F1CAD846700A1A7F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875E1CAD846700A1A7F3 /* ViewController.swift */; };
+		05DC87621CAD846700A1A7F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DC87601CAD846700A1A7F3 /* Main.storyboard */; };
+		05DC87651CAD846700A1A7F3 /* LuckyDog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DC87631CAD846700A1A7F3 /* LuckyDog.xcdatamodeld */; };
+		05DC87671CAD846700A1A7F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05DC87661CAD846700A1A7F3 /* Assets.xcassets */; };
+		05DC876A1CAD846700A1A7F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DC87681CAD846700A1A7F3 /* LaunchScreen.storyboard */; };
+		05DC87751CAD846700A1A7F3 /* LuckyDogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC87741CAD846700A1A7F3 /* LuckyDogTests.swift */; };
+		05DC87801CAD846700A1A7F3 /* LuckyDogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC877F1CAD846700A1A7F3 /* LuckyDogUITests.swift */; };
+		05DC87921CAD851800A1A7F3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC87911CAD851800A1A7F3 /* CardView.swift */; };
+		05DC87941CAD852900A1A7F3 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC87931CAD852900A1A7F3 /* SwipeView.swift */; };
+		05DC87961CAD85C900A1A7F3 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC87951CAD85C900A1A7F3 /* CardsViewController.swift */; };
+		05DC879D1CAD878C00A1A7F3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87971CAD878C00A1A7F3 /* Bolts.framework */; };
+		05DC879E1CAD878C00A1A7F3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87981CAD878C00A1A7F3 /* Parse.framework */; };
+		05DC879F1CAD878C00A1A7F3 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87991CAD878C00A1A7F3 /* ParseFacebookUtils.framework */; };
+		05DC87A01CAD878C00A1A7F3 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC879A1CAD878C00A1A7F3 /* ParseFacebookUtilsV4.framework */; };
+		05DC87A11CAD878C00A1A7F3 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC879B1CAD878C00A1A7F3 /* ParseTwitterUtils.framework */; };
+		05DC87A21CAD878C00A1A7F3 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC879C1CAD878C00A1A7F3 /* ParseUI.framework */; };
+		05DC87A41CAD884B00A1A7F3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87A31CAD884B00A1A7F3 /* AudioToolbox.framework */; };
+		05DC87A61CAD884F00A1A7F3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87A51CAD884F00A1A7F3 /* CFNetwork.framework */; };
+		05DC87A81CAD885A00A1A7F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87A71CAD885A00A1A7F3 /* CoreGraphics.framework */; };
+		05DC87AA1CAD885F00A1A7F3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87A91CAD885F00A1A7F3 /* CoreLocation.framework */; };
+		05DC87AC1CAD886400A1A7F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87AB1CAD886400A1A7F3 /* QuartzCore.framework */; };
+		05DC87AE1CAD886C00A1A7F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87AD1CAD886C00A1A7F3 /* Security.framework */; };
+		05DC87B01CAD887200A1A7F3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87AF1CAD887200A1A7F3 /* StoreKit.framework */; };
+		05DC87B21CAD887A00A1A7F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87B11CAD887A00A1A7F3 /* SystemConfiguration.framework */; };
+		05DC87B41CAD888200A1A7F3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87B31CAD888200A1A7F3 /* libz.tbd */; };
+		05DC87B61CAD888B00A1A7F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87B51CAD888B00A1A7F3 /* libsqlite3.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05DC87711CAD846700A1A7F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05DC87511CAD846700A1A7F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05DC87581CAD846700A1A7F3;
+			remoteInfo = LuckyDog;
+		};
+		05DC877C1CAD846700A1A7F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05DC87511CAD846700A1A7F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05DC87581CAD846700A1A7F3;
+			remoteInfo = LuckyDog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05DC87591CAD846700A1A7F3 /* LuckyDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05DC875E1CAD846700A1A7F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05DC87611CAD846700A1A7F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05DC87641CAD846700A1A7F3 /* LuckyDog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LuckyDog.xcdatamodel; sourceTree = "<group>"; };
+		05DC87661CAD846700A1A7F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05DC87691CAD846700A1A7F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05DC876B1CAD846700A1A7F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05DC87701CAD846700A1A7F3 /* LuckyDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuckyDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05DC87741CAD846700A1A7F3 /* LuckyDogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyDogTests.swift; sourceTree = "<group>"; };
+		05DC87761CAD846700A1A7F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05DC877B1CAD846700A1A7F3 /* LuckyDogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuckyDogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05DC877F1CAD846700A1A7F3 /* LuckyDogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyDogUITests.swift; sourceTree = "<group>"; };
+		05DC87811CAD846700A1A7F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05DC87911CAD851800A1A7F3 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		05DC87931CAD852900A1A7F3 /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		05DC87951CAD85C900A1A7F3 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		05DC87971CAD878C00A1A7F3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		05DC87981CAD878C00A1A7F3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		05DC87991CAD878C00A1A7F3 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		05DC879A1CAD878C00A1A7F3 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		05DC879B1CAD878C00A1A7F3 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		05DC879C1CAD878C00A1A7F3 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		05DC87A31CAD884B00A1A7F3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		05DC87A51CAD884F00A1A7F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		05DC87A71CAD885A00A1A7F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		05DC87A91CAD885F00A1A7F3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		05DC87AB1CAD886400A1A7F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		05DC87AD1CAD886C00A1A7F3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		05DC87AF1CAD887200A1A7F3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		05DC87B11CAD887A00A1A7F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		05DC87B31CAD888200A1A7F3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		05DC87B51CAD888B00A1A7F3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		05DC87B81CAD8A3A00A1A7F3 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05DC87561CAD846700A1A7F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DC87B61CAD888B00A1A7F3 /* libsqlite3.tbd in Frameworks */,
+				05DC87B41CAD888200A1A7F3 /* libz.tbd in Frameworks */,
+				05DC87B21CAD887A00A1A7F3 /* SystemConfiguration.framework in Frameworks */,
+				05DC87B01CAD887200A1A7F3 /* StoreKit.framework in Frameworks */,
+				05DC87AE1CAD886C00A1A7F3 /* Security.framework in Frameworks */,
+				05DC87AC1CAD886400A1A7F3 /* QuartzCore.framework in Frameworks */,
+				05DC87AA1CAD885F00A1A7F3 /* CoreLocation.framework in Frameworks */,
+				05DC87A81CAD885A00A1A7F3 /* CoreGraphics.framework in Frameworks */,
+				05DC87A61CAD884F00A1A7F3 /* CFNetwork.framework in Frameworks */,
+				05DC87A41CAD884B00A1A7F3 /* AudioToolbox.framework in Frameworks */,
+				05DC87A21CAD878C00A1A7F3 /* ParseUI.framework in Frameworks */,
+				05DC879E1CAD878C00A1A7F3 /* Parse.framework in Frameworks */,
+				05DC879D1CAD878C00A1A7F3 /* Bolts.framework in Frameworks */,
+				05DC87A01CAD878C00A1A7F3 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				05DC879F1CAD878C00A1A7F3 /* ParseFacebookUtils.framework in Frameworks */,
+				05DC87A11CAD878C00A1A7F3 /* ParseTwitterUtils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05DC876D1CAD846700A1A7F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05DC87781CAD846700A1A7F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05DC87501CAD846700A1A7F3 = {
+			isa = PBXGroup;
+			children = (
+				05DC875B1CAD846700A1A7F3 /* LuckyDog */,
+				05DC87731CAD846700A1A7F3 /* LuckyDogTests */,
+				05DC877E1CAD846700A1A7F3 /* LuckyDogUITests */,
+				05DC875A1CAD846700A1A7F3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05DC875A1CAD846700A1A7F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05DC87591CAD846700A1A7F3 /* LuckyDog.app */,
+				05DC87701CAD846700A1A7F3 /* LuckyDogTests.xctest */,
+				05DC877B1CAD846700A1A7F3 /* LuckyDogUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05DC875B1CAD846700A1A7F3 /* LuckyDog */ = {
+			isa = PBXGroup;
+			children = (
+				05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */,
+				05DC87901CAD849B00A1A7F3 /* Views */,
+				05DC878F1CAD849300A1A7F3 /* ViewControllers */,
+				05DC878E1CAD848A00A1A7F3 /* Supporting Files */,
+				05DC878D1CAD848600A1A7F3 /* Frameworks */,
+				05DC87601CAD846700A1A7F3 /* Main.storyboard */,
+				05DC87661CAD846700A1A7F3 /* Assets.xcassets */,
+				05DC87681CAD846700A1A7F3 /* LaunchScreen.storyboard */,
+				05DC87631CAD846700A1A7F3 /* LuckyDog.xcdatamodeld */,
+			);
+			path = LuckyDog;
+			sourceTree = "<group>";
+		};
+		05DC87731CAD846700A1A7F3 /* LuckyDogTests */ = {
+			isa = PBXGroup;
+			children = (
+				05DC87741CAD846700A1A7F3 /* LuckyDogTests.swift */,
+				05DC87761CAD846700A1A7F3 /* Info.plist */,
+			);
+			path = LuckyDogTests;
+			sourceTree = "<group>";
+		};
+		05DC877E1CAD846700A1A7F3 /* LuckyDogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				05DC877F1CAD846700A1A7F3 /* LuckyDogUITests.swift */,
+				05DC87811CAD846700A1A7F3 /* Info.plist */,
+			);
+			path = LuckyDogUITests;
+			sourceTree = "<group>";
+		};
+		05DC878D1CAD848600A1A7F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05DC87B51CAD888B00A1A7F3 /* libsqlite3.tbd */,
+				05DC87B31CAD888200A1A7F3 /* libz.tbd */,
+				05DC87B11CAD887A00A1A7F3 /* SystemConfiguration.framework */,
+				05DC87AF1CAD887200A1A7F3 /* StoreKit.framework */,
+				05DC87AD1CAD886C00A1A7F3 /* Security.framework */,
+				05DC87AB1CAD886400A1A7F3 /* QuartzCore.framework */,
+				05DC87A91CAD885F00A1A7F3 /* CoreLocation.framework */,
+				05DC87A71CAD885A00A1A7F3 /* CoreGraphics.framework */,
+				05DC87A51CAD884F00A1A7F3 /* CFNetwork.framework */,
+				05DC87A31CAD884B00A1A7F3 /* AudioToolbox.framework */,
+				05DC87971CAD878C00A1A7F3 /* Bolts.framework */,
+				05DC87981CAD878C00A1A7F3 /* Parse.framework */,
+				05DC87991CAD878C00A1A7F3 /* ParseFacebookUtils.framework */,
+				05DC879A1CAD878C00A1A7F3 /* ParseFacebookUtilsV4.framework */,
+				05DC879B1CAD878C00A1A7F3 /* ParseTwitterUtils.framework */,
+				05DC879C1CAD878C00A1A7F3 /* ParseUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05DC878E1CAD848A00A1A7F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05DC876B1CAD846700A1A7F3 /* Info.plist */,
+				05DC87B81CAD8A3A00A1A7F3 /* Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05DC878F1CAD849300A1A7F3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				05DC875E1CAD846700A1A7F3 /* ViewController.swift */,
+				05DC87951CAD85C900A1A7F3 /* CardsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		05DC87901CAD849B00A1A7F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05DC87911CAD851800A1A7F3 /* CardView.swift */,
+				05DC87931CAD852900A1A7F3 /* SwipeView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05DC87581CAD846700A1A7F3 /* LuckyDog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05DC87841CAD846700A1A7F3 /* Build configuration list for PBXNativeTarget "LuckyDog" */;
+			buildPhases = (
+				05DC87551CAD846700A1A7F3 /* Sources */,
+				05DC87561CAD846700A1A7F3 /* Frameworks */,
+				05DC87571CAD846700A1A7F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LuckyDog;
+			productName = LuckyDog;
+			productReference = 05DC87591CAD846700A1A7F3 /* LuckyDog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05DC876F1CAD846700A1A7F3 /* LuckyDogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05DC87871CAD846700A1A7F3 /* Build configuration list for PBXNativeTarget "LuckyDogTests" */;
+			buildPhases = (
+				05DC876C1CAD846700A1A7F3 /* Sources */,
+				05DC876D1CAD846700A1A7F3 /* Frameworks */,
+				05DC876E1CAD846700A1A7F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05DC87721CAD846700A1A7F3 /* PBXTargetDependency */,
+			);
+			name = LuckyDogTests;
+			productName = LuckyDogTests;
+			productReference = 05DC87701CAD846700A1A7F3 /* LuckyDogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		05DC877A1CAD846700A1A7F3 /* LuckyDogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05DC878A1CAD846700A1A7F3 /* Build configuration list for PBXNativeTarget "LuckyDogUITests" */;
+			buildPhases = (
+				05DC87771CAD846700A1A7F3 /* Sources */,
+				05DC87781CAD846700A1A7F3 /* Frameworks */,
+				05DC87791CAD846700A1A7F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05DC877D1CAD846700A1A7F3 /* PBXTargetDependency */,
+			);
+			name = LuckyDogUITests;
+			productName = LuckyDogUITests;
+			productReference = 05DC877B1CAD846700A1A7F3 /* LuckyDogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05DC87511CAD846700A1A7F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "D27 Studios";
+				TargetAttributes = {
+					05DC87581CAD846700A1A7F3 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					05DC876F1CAD846700A1A7F3 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 05DC87581CAD846700A1A7F3;
+					};
+					05DC877A1CAD846700A1A7F3 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 05DC87581CAD846700A1A7F3;
+					};
+				};
+			};
+			buildConfigurationList = 05DC87541CAD846700A1A7F3 /* Build configuration list for PBXProject "LuckyDog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05DC87501CAD846700A1A7F3;
+			productRefGroup = 05DC875A1CAD846700A1A7F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05DC87581CAD846700A1A7F3 /* LuckyDog */,
+				05DC876F1CAD846700A1A7F3 /* LuckyDogTests */,
+				05DC877A1CAD846700A1A7F3 /* LuckyDogUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05DC87571CAD846700A1A7F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DC876A1CAD846700A1A7F3 /* LaunchScreen.storyboard in Resources */,
+				05DC87671CAD846700A1A7F3 /* Assets.xcassets in Resources */,
+				05DC87621CAD846700A1A7F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05DC876E1CAD846700A1A7F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05DC87791CAD846700A1A7F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05DC87551CAD846700A1A7F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DC87651CAD846700A1A7F3 /* LuckyDog.xcdatamodeld in Sources */,
+				05DC875F1CAD846700A1A7F3 /* ViewController.swift in Sources */,
+				05DC87961CAD85C900A1A7F3 /* CardsViewController.swift in Sources */,
+				05DC87921CAD851800A1A7F3 /* CardView.swift in Sources */,
+				05DC87941CAD852900A1A7F3 /* SwipeView.swift in Sources */,
+				05DC875D1CAD846700A1A7F3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05DC876C1CAD846700A1A7F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DC87751CAD846700A1A7F3 /* LuckyDogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05DC87771CAD846700A1A7F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DC87801CAD846700A1A7F3 /* LuckyDogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05DC87721CAD846700A1A7F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05DC87581CAD846700A1A7F3 /* LuckyDog */;
+			targetProxy = 05DC87711CAD846700A1A7F3 /* PBXContainerItemProxy */;
+		};
+		05DC877D1CAD846700A1A7F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05DC87581CAD846700A1A7F3 /* LuckyDog */;
+			targetProxy = 05DC877C1CAD846700A1A7F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05DC87601CAD846700A1A7F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05DC87611CAD846700A1A7F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05DC87681CAD846700A1A7F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05DC87691CAD846700A1A7F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05DC87821CAD846700A1A7F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05DC87831CAD846700A1A7F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05DC87851CAD846700A1A7F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LuckyDog",
+				);
+				INFOPLIST_FILE = LuckyDog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mason-Ballowe.LuckyDog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LuckyDog/Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		05DC87861CAD846700A1A7F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LuckyDog",
+				);
+				INFOPLIST_FILE = LuckyDog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mason-Ballowe.LuckyDog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LuckyDog/Bridging-Header.h";
+			};
+			name = Release;
+		};
+		05DC87881CAD846700A1A7F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LuckyDogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mason-Ballowe.LuckyDogTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuckyDog.app/LuckyDog";
+			};
+			name = Debug;
+		};
+		05DC87891CAD846700A1A7F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LuckyDogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mason-Ballowe.LuckyDogTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuckyDog.app/LuckyDog";
+			};
+			name = Release;
+		};
+		05DC878B1CAD846700A1A7F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LuckyDogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mason-Ballowe.LuckyDogUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LuckyDog;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		05DC878C1CAD846700A1A7F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LuckyDogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mason-Ballowe.LuckyDogUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LuckyDog;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05DC87541CAD846700A1A7F3 /* Build configuration list for PBXProject "LuckyDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05DC87821CAD846700A1A7F3 /* Debug */,
+				05DC87831CAD846700A1A7F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05DC87841CAD846700A1A7F3 /* Build configuration list for PBXNativeTarget "LuckyDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05DC87851CAD846700A1A7F3 /* Debug */,
+				05DC87861CAD846700A1A7F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05DC87871CAD846700A1A7F3 /* Build configuration list for PBXNativeTarget "LuckyDogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05DC87881CAD846700A1A7F3 /* Debug */,
+				05DC87891CAD846700A1A7F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05DC878A1CAD846700A1A7F3 /* Build configuration list for PBXNativeTarget "LuckyDogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05DC878B1CAD846700A1A7F3 /* Debug */,
+				05DC878C1CAD846700A1A7F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		05DC87631CAD846700A1A7F3 /* LuckyDog.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				05DC87641CAD846700A1A7F3 /* LuckyDog.xcdatamodel */,
+			);
+			currentVersion = 05DC87641CAD846700A1A7F3 /* LuckyDog.xcdatamodel */;
+			path = LuckyDog.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 05DC87511CAD846700A1A7F3 /* Project object */;
+}
