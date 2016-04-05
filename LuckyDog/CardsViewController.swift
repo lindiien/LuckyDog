@@ -16,7 +16,6 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         var animal : Animal
     }
     
-    let sadCatImage : UIImage = UIImage(named : "sadCat.jpg")! as UIImage
     
     var shouldLoop : Bool = true
     
@@ -97,9 +96,13 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
             self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
             self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
         
-        
-        return createCard(animalsArray.removeAtIndex(0))
-
+        if animalsArray.count > 2 {
+            return createCard(animalsArray.removeAtIndex(0))
+        }
+        else {
+            showAlertWithText("Awwwwwww", message: "You're out of animals.  Please expand your search or check back soon.  New loveables are added every day!")
+            return nil
+        }
         
     }
     
@@ -182,6 +185,9 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
                                 if objects!.count == self.animalsArray.count && self.shouldLoop == true {
                                     print("Loop Complete BIOTCH")
                                     self.shouldLoop = false
+                                    
+                                    self.animalsArray.append(animalTwo)
+                                    self.animalsArray.append(animalOne)
                                     self.popCard()
                         
                                 } else {
@@ -201,7 +207,12 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         }
     }
     
-
+    func showAlertWithText (header : String = "Ermahgerd!!!", message : String) {
+        let alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
 
   
     

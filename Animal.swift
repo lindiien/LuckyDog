@@ -19,7 +19,10 @@ struct Animal {
 
 }
 
+let sadCatImage = UIImage(named: "sadCat.jpg")
 
+let animalOne : Animal = Animal(id: "one", name: "AnimalOne", type: "sadCat", image: sadCatImage!)
 
+let smilingHedgehogImage = UIImage(named: "smilingHedgehog.jpg")
 
-
+let animalTwo : Animal = Animal(id: "Two", name: "AnimalTwo", type: "HappyHedge", image: smilingHedgehogImage!)
