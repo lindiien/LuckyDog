@@ -13,10 +13,10 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     struct Card {
         let cardView : CardView
         let swipeView : SwipeView
+        var animal : Animal
     }
     
-    
-    
+    var shouldLoop : Bool = true
     
     @IBOutlet var cardStackView: UIView!
     
@@ -26,6 +26,9 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     var frontCard : Card?
     var backCard : Card?
     
+    var animalsArray : [Animal] = []
+    var animalImage : UIImage?
+    var animalIndex : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +36,21 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         
         cardStackView.backgroundColor = UIColor.clearColor()
         
-        backCard = createCard(backCardTopMargin)
-        cardStackView.addSubview(backCard!.swipeView)
-        
-        frontCard = createCard(frontCardTopMargin)
-        cardStackView.addSubview(frontCard!.swipeView)
+        fetchUnviewedAnimals({
+            returnedAnimals in
+            self.animalsArray = returnedAnimals
+            
+                if let card = self.popCard() {
+                    self.frontCard = card
+                    self.cardStackView.addSubview(self.frontCard!.swipeView)
+                }
+                if let card = self.popCard() {
+                    self.backCard = card
+                    self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
+                    self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
+                }
+            }
+        )
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,13 +62,55 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         return CGRect(x: 0, y: topMargin, width: cardStackView.frame.width, height: cardStackView.frame.height)
     }
     
-    private func createCard(topMargin : CGFloat) -> Card {
+    private func createCard(animal : Animal) -> Card {
         let cardView = CardView()
-        let swipeView = SwipeView(frame: createCardFrame(topMargin))
+        
+        print("CREATE CARDS")
+        print("CREATE CARDS")
+        print(self.animalsArray.count)
+        cardView.name = self.animalsArray[self.animalIndex].name
+        cardView.image = self.animalsArray[self.animalIndex].image
+        
+        let swipeView = SwipeView(frame: createCardFrame(0))
         swipeView.delegate = self
         swipeView.innerView = cardView
-        return Card(cardView: cardView, swipeView: swipeView)
+        return Card(cardView: cardView, swipeView: swipeView, animal: animal)
     }
+    
+    private func popCard() -> Card? {
+        print(self.animalsArray.count)
+        print("THIS IS PRINTING")
+        
+            print("Condition one")
+            self.animalIndex = 0
+            self.frontCard = createCard(animalsArray[self.animalIndex])
+            self.cardStackView.addSubview(self.frontCard!.swipeView)
+        
+        
+     
+            print("Condition two")
+            self.animalIndex = 1
+            self.backCard = createCard(animalsArray[self.animalIndex])
+            self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
+            self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
+        
+        return createCard(animalsArray.removeAtIndex(0))
+    }
+    
+    private func switchCards() {
+        if let card = backCard {
+            frontCard = card
+            UIView.animateWithDuration(0.2, animations: {
+                self.frontCard!.swipeView.frame = self.createCardFrame(self.frontCardTopMargin)
+            })
+        }
+        if let card = self.popCard() {
+            self.backCard = card
+            self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
+            self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
+        }
+    }
+    
     
     
     // MARK : SwipeViewDelegate
@@ -64,6 +119,7 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         print("Left")
         if let frontCard = frontCard {
             frontCard.swipeView.removeFromSuperview()
+            switchCards()
         }
     }
     
@@ -71,8 +127,91 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         print("Right")
         if let frontCard = frontCard {
             frontCard.swipeView.removeFromSuperview()
+            switchCards()
         }
     }
+    
+    func fetchUnviewedAnimals (callback: ([Animal]) -> ()) {
+        
+        let query = PFQuery(className : "Animal")
+        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error : NSError?) -> Void in
+            
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) scores.")
+                // Do something with the found objects
+                
+                if let returnedAnimals = objects as? [PFObject]! {
+                    for animal in returnedAnimals {
+                        print(animal.objectId)
+                        print(animal["name"])
+                        
+                        let newAnimalID = animal.objectId
+                        let newAnimalName = animal["name"] as! String
+                        let newAnimalType = animal["type"] as! String
+                        
+                        let animalImage = animal["picture"] as? PFFile
+                            animalImage!.getDataInBackgroundWithBlock {
+                                (imageData: NSData?, error: NSError?) -> Void in
+                                if (error == nil) {
+                                        if let imageData = imageData {
+                                            let image : UIImage = UIImage(data:imageData)!
+                                            print(image)
+                                            print("Image Above")
+                                            self.animalImage = image
+                                        }
+                                    } else {
+                                    print(error)
+                                }
+                                let newAnimal = Animal(id: newAnimalID!, name: newAnimalName, type: newAnimalType, image: self.animalImage!)
+                                self.animalsArray.append(newAnimal)
+                                
+                                print("hello")
+                                print(newAnimal)
+                                print("hello2")
+                                
+                                if objects!.count == self.animalsArray.count && self.shouldLoop == true {
+                                    print("Loop Complete BIOTCH")
+                                    self.shouldLoop = false
+                                    self.popCard()
+                        
+                                } else {
+                                    print(objects!.count)
+                                    print(self.animalsArray.count)
+                                }
+                                
+                            }
+
+                    }
+                } else {
+                    // Log details of the failure
+                    print("Error:")
+                }
+
+            }
+        }
+    }
+    
+
+    
+    func instantiateCards () {
+        
+        print("CARDS INTANTIATED")
+        if let card = self.popCard() {
+            self.frontCard = card
+            self.cardStackView.addSubview(self.frontCard!.swipeView)
+        }
+        
+        if let card = self.popCard() {
+            self.backCard = card
+            self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
+            self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
+        }
+    }
+    
+    
+    
+    
     
     
 }

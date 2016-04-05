@@ -47,17 +47,21 @@ class LoginViewController: UIViewController {
                     req.startWithCompletionHandler({ (connection, result, error : NSError!) -> Void in
                         if(error == nil)
                         {
-                            print("RESULT HERE")
-                            print(result)
-                            
-                            
                             user["name"] = result["name"] as! NSString!
                             user["gender"] = result["gender"] as! NSString!
-                            user["picture"] = ((result["picture"] as! NSDictionary)["data"] as! NSDictionary) ["url"]
-                            user.saveInBackground()
- 
-                            self.goToCardsViewController()
                             
+                            let pictureURL = ((result["picture"] as! NSDictionary)["data"] as! NSDictionary) ["url"]
+                            let urlString = pictureURL as! String
+                            let url: NSURL = NSURL(string: urlString)!
+                            let request = NSURLRequest(URL: url)
+                            
+                            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {
+                                response, data, error in
+                                
+                                let imageFile = PFFile(name: "avatar.jpg", data: data!)
+                                user["picture"] = imageFile
+                                user.saveInBackgroundWithBlock(nil)
+                                })
                         }
                         else
                         {

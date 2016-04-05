@@ -11,6 +11,8 @@
 		0541B0111CAD98DA004E65CD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0541B00E1CAD98DA004E65CD /* FBSDKLoginKit.framework */; };
 		0541B0121CAD98DA004E65CD /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0541B00F1CAD98DA004E65CD /* FBSDKShareKit.framework */; };
 		0541B0141CAD9B7D004E65CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0131CAD9B7D004E65CD /* LoginViewController.swift */; };
+		0541B0171CAEE84F004E65CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0161CAEE84F004E65CD /* User.swift */; };
+		0541B0191CB2F57B004E65CD /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0181CB2F57B004E65CD /* Animal.swift */; };
 		05DC875D1CAD846700A1A7F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */; };
 		05DC875F1CAD846700A1A7F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875E1CAD846700A1A7F3 /* ViewController.swift */; };
 		05DC87621CAD846700A1A7F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DC87601CAD846700A1A7F3 /* Main.storyboard */; };
@@ -62,6 +64,8 @@
 		0541B00E1CAD98DA004E65CD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		0541B00F1CAD98DA004E65CD /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		0541B0131CAD9B7D004E65CD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0541B0161CAEE84F004E65CD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0541B0181CB2F57B004E65CD /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		05DC87591CAD846700A1A7F3 /* LuckyDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05DC875E1CAD846700A1A7F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,9 +146,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0541B0151CAEE839004E65CD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0541B0161CAEE84F004E65CD /* User.swift */,
+				0541B0181CB2F57B004E65CD /* Animal.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		05DC87501CAD846700A1A7F3 = {
 			isa = PBXGroup;
 			children = (
+				0541B0151CAEE839004E65CD /* Data */,
 				05DC875B1CAD846700A1A7F3 /* LuckyDog */,
 				05DC87731CAD846700A1A7F3 /* LuckyDogTests */,
 				05DC877E1CAD846700A1A7F3 /* LuckyDogUITests */,
@@ -385,9 +399,11 @@
 				05DC87651CAD846700A1A7F3 /* LuckyDog.xcdatamodeld in Sources */,
 				05DC875F1CAD846700A1A7F3 /* ViewController.swift in Sources */,
 				05DC87961CAD85C900A1A7F3 /* CardsViewController.swift in Sources */,
+				0541B0171CAEE84F004E65CD /* User.swift in Sources */,
 				05DC87921CAD851800A1A7F3 /* CardView.swift in Sources */,
 				05DC87941CAD852900A1A7F3 /* SwipeView.swift in Sources */,
 				05DC875D1CAD846700A1A7F3 /* AppDelegate.swift in Sources */,
+				0541B0191CB2F57B004E65CD /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
