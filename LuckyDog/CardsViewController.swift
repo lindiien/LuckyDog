@@ -16,6 +16,8 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         var animal : Animal
     }
     
+    let sadCatImage : UIImage = UIImage(named : "sadCat.jpg")! as UIImage
+    
     var shouldLoop : Bool = true
     
     @IBOutlet var cardStackView: UIView!
@@ -33,6 +35,7 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         
         cardStackView.backgroundColor = UIColor.clearColor()
         
@@ -64,20 +67,21 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     
     private func createCard(animal : Animal) -> Card {
         let cardView = CardView()
+       
+            print("CREATE CARDS")
+            print("CREATE CARDS")
+            print(self.animalsArray.count)
+            cardView.name = self.animalsArray[self.animalIndex].name
+            cardView.image = self.animalsArray[self.animalIndex].image
         
-        print("CREATE CARDS")
-        print("CREATE CARDS")
-        print(self.animalsArray.count)
-        cardView.name = self.animalsArray[self.animalIndex].name
-        cardView.image = self.animalsArray[self.animalIndex].image
-        
-        let swipeView = SwipeView(frame: createCardFrame(0))
-        swipeView.delegate = self
-        swipeView.innerView = cardView
-        return Card(cardView: cardView, swipeView: swipeView, animal: animal)
+            let swipeView = SwipeView(frame: createCardFrame(0))
+            swipeView.delegate = self
+            swipeView.innerView = cardView
+            return Card(cardView: cardView, swipeView: swipeView, animal: animal)
     }
     
     private func popCard() -> Card? {
+        
         print(self.animalsArray.count)
         print("THIS IS PRINTING")
         
@@ -86,7 +90,6 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
             self.frontCard = createCard(animalsArray[self.animalIndex])
             self.cardStackView.addSubview(self.frontCard!.swipeView)
         
-        
      
             print("Condition two")
             self.animalIndex = 1
@@ -94,21 +97,27 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
             self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
             self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
         
+        
         return createCard(animalsArray.removeAtIndex(0))
+
+        
     }
     
     private func switchCards() {
+            
         if let card = backCard {
             frontCard = card
             UIView.animateWithDuration(0.2, animations: {
                 self.frontCard!.swipeView.frame = self.createCardFrame(self.frontCardTopMargin)
             })
-        }
-        if let card = self.popCard() {
-            self.backCard = card
             self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
             self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
+            
+            self.popCard()
         }
+        
+
+        
     }
     
     
@@ -193,21 +202,8 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     }
     
 
-    
-    func instantiateCards () {
-        
-        print("CARDS INTANTIATED")
-        if let card = self.popCard() {
-            self.frontCard = card
-            self.cardStackView.addSubview(self.frontCard!.swipeView)
-        }
-        
-        if let card = self.popCard() {
-            self.backCard = card
-            self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
-            self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
-        }
-    }
+
+  
     
     
     
