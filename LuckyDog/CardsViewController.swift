@@ -28,31 +28,33 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     var backCard : Card?
     
     var animalsArray : [Animal] = []
+    var viewedAnimalsArray : [String] = []
     var animalImage : UIImage?
     var animalIndex : Int = 0
+    var currentAnimal : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        fetchViewedAnimals()
         
         cardStackView.backgroundColor = UIColor.clearColor()
         
-        fetchUnviewedAnimals({
-            returnedAnimals in
-            self.animalsArray = returnedAnimals
-            
-                if let card = self.popCard() {
-                    self.frontCard = card
-                    self.cardStackView.addSubview(self.frontCard!.swipeView)
-                }
-                if let card = self.popCard() {
-                    self.backCard = card
-                    self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
-                    self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
-                }
-            }
-        )
+//        fetchUnviewedAnimals({
+//            returnedAnimals in
+//            self.animalsArray = returnedAnimals
+//            
+//                if let card = self.popCard() {
+//                    self.frontCard = card
+//                    self.cardStackView.addSubview(self.frontCard!.swipeView)
+//                }
+//                if let card = self.popCard() {
+//                    self.backCard = card
+//                    self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
+//                    self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
+//                }
+//            }
+//        )
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,12 +91,15 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
             self.frontCard = createCard(animalsArray[self.animalIndex])
             self.cardStackView.addSubview(self.frontCard!.swipeView)
         
+            self.currentAnimal = animalsArray[self.animalIndex].id
      
             print("Condition two")
             self.animalIndex = 1
             self.backCard = createCard(animalsArray[self.animalIndex])
             self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
             self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
+
+        
         
         if animalsArray.count > 2 {
             return createCard(animalsArray.removeAtIndex(0))
@@ -131,6 +136,7 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         print("Left")
         if let frontCard = frontCard {
             frontCard.swipeView.removeFromSuperview()
+            saveSkip()
             switchCards()
         }
     }
@@ -139,6 +145,7 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         print("Right")
         if let frontCard = frontCard {
             frontCard.swipeView.removeFromSuperview()
+            saveLike()
             switchCards()
         }
     }
@@ -146,11 +153,19 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     func fetchUnviewedAnimals (callback: ([Animal]) -> ()) {
         
         let query = PFQuery(className : "Animal")
+        query.whereKey("objectId", notContainedIn: self.viewedAnimalsArray)
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error : NSError?) -> Void in
             
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) scores.")
+                print("Successfully retrieved \(objects!.count) unviewed animals.")
+                
+                if objects!.count == 0 {
+                    self.animalsArray.append(animalTwo)
+                    self.animalsArray.append(animalOne)
+                    self.popCard()
+                }
+                
                 // Do something with the found objects
                 
                 if let returnedAnimals = objects as? [PFObject]! {
@@ -193,6 +208,7 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
                                 } else {
                                     print(objects!.count)
                                     print(self.animalsArray.count)
+                                    
                                 }
                                 
                             }
@@ -215,10 +231,73 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     }
 
   
+    // Skips and Likes
+    
+    func saveSkip() {
+       
+        if self.currentAnimal != "Two" {
+        let skip = PFObject(className: "Action")
+        skip.setObject(PFUser.currentUser()!.objectId!, forKey: "byUser")
+        skip.setObject(self.currentAnimal, forKey: "toUser")
+        skip.setObject("skipped", forKey: "type")
+        skip.saveInBackgroundWithBlock(nil)
+        }
+    }
+    
+    func saveLike() {
+        if self.currentAnimal != "Two" {
+        let skip = PFObject(className: "Action")
+        skip.setObject(PFUser.currentUser()!.objectId!, forKey: "byUser")
+        skip.setObject(self.currentAnimal, forKey: "toUser")
+        skip.setObject("liked", forKey: "type")
+        skip.saveInBackgroundWithBlock(nil)
+        }
+    }
+    
+    func fetchViewedAnimals () {
+        
+        let query = PFQuery(className : "Action")
+        query.whereKey("byUser", equalTo: (PFUser.currentUser()?.objectId)!)
+        query.orderByDescending("createdAt")
+        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error : NSError?) -> Void in
+            
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) viewed animals.")
+                // Do something with the found objects
+                
+                for object in objects! {
+                    let viewedAnimalID = object["toUser"] as! String
+                    self.viewedAnimalsArray.append(viewedAnimalID)
+                }
+                
+                self.fetchUnviewedAnimals({
+                    returnedAnimals in
+                    self.animalsArray = returnedAnimals
+                    
+                    if let card = self.popCard() {
+                        self.frontCard = card
+                        self.cardStackView.addSubview(self.frontCard!.swipeView)
+                    }
+                    if let card = self.popCard() {
+                        self.backCard = card
+                        self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
+                        self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
+                    }
+                    }
+                )
+            
+            
+                
+            } else {
+                    // Log details of the failure
+                    print("Error:")
+                }
+ 
+        }
     
     
     
-    
-    
-    
+    }
 }
+
