@@ -20,6 +20,10 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     var shouldLoop : Bool = true
     
     @IBOutlet var cardStackView: UIView!
+    @IBOutlet var nahButton: UIButton!
+    @IBOutlet var yeahButton: UIButton!
+    
+    
     
     let frontCardTopMargin : CGFloat = 0
     let backCardTopMargin : CGFloat = 10
@@ -32,6 +36,20 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     var animalImage : UIImage?
     var animalIndex : Int = 0
     var currentAnimal : String = ""
+    var currentHost : String = ""
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.titleView = UIImageView(image: UIImage(named: "nav-header"))
+        let leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav-back-button"), style: UIBarButtonItemStyle.Plain, target: self, action: "goToChat:")
+        navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: true)
+    }
+    
+    
+    func goToChat(button: UIBarButtonItem) {
+        pageController.goToPreviousVC()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +57,8 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         fetchViewedAnimals()
         
         cardStackView.backgroundColor = UIColor.clearColor()
+        nahButton.setImage(UIImage(named: "nah-button-pressed"), forState: UIControlState.Highlighted)
+        yeahButton.setImage(UIImage(named: "yeah-button-pressed"), forState: UIControlState.Highlighted)
         
 //        fetchUnviewedAnimals({
 //            returnedAnimals in
@@ -61,6 +81,21 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func nahButtonPressed(sender: UIButton) {
+        if let card = frontCard {
+            card.swipeView.swipe(SwipeView.Direction.Left)
+        }
+    }
+    
+    
+    @IBAction func yeahButtonPressed(sender: UIButton) {
+        if let card = frontCard {
+            card.swipeView.swipe(SwipeView.Direction.Right)
+        }
+    }
+    
+    
     
     private func createCardFrame(topMargin : CGFloat) -> CGRect {
         return CGRect(x: 0, y: topMargin, width: cardStackView.frame.width, height: cardStackView.frame.height)
@@ -92,6 +127,7 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
             self.cardStackView.addSubview(self.frontCard!.swipeView)
         
             self.currentAnimal = animalsArray[self.animalIndex].id
+            self.currentHost = animalsArray[self.animalIndex].host
      
             print("Condition two")
             self.animalIndex = 1
@@ -176,6 +212,11 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
                         let newAnimalID = animal.objectId
                         let newAnimalName = animal["name"] as! String
                         let newAnimalType = animal["type"] as! String
+                        let newAnimalAge = animal["age"] as! String
+                        let newAnimalGender = animal["gender"] as! String
+                        let newAnimalBreed = animal["breed"] as! String
+                        let newAnimalDescription = animal["description"] as! String
+                        let newAnimalHost = animal["host"] as! String
                         
                         let animalImage = animal["picture"] as? PFFile
                             animalImage!.getDataInBackgroundWithBlock {
@@ -190,7 +231,7 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
                                     } else {
                                     print(error)
                                 }
-                                let newAnimal = Animal(id: newAnimalID!, name: newAnimalName, type: newAnimalType, image: self.animalImage!)
+                                let newAnimal = Animal(id: newAnimalID!, name: newAnimalName, type: newAnimalType, gender: newAnimalGender, age: newAnimalAge, breed: newAnimalBreed, description: newAnimalDescription, host: newAnimalHost, image: self.animalImage!)
                                 self.animalsArray.append(newAnimal)
                                 
                                 print("hello")
@@ -240,17 +281,19 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         skip.setObject(PFUser.currentUser()!.objectId!, forKey: "byUser")
         skip.setObject(self.currentAnimal, forKey: "toUser")
         skip.setObject("skipped", forKey: "type")
+        skip.setObject(self.currentHost, forKey: "hostID")
         skip.saveInBackgroundWithBlock(nil)
         }
     }
     
     func saveLike() {
         if self.currentAnimal != "Two" {
-        let skip = PFObject(className: "Action")
-        skip.setObject(PFUser.currentUser()!.objectId!, forKey: "byUser")
-        skip.setObject(self.currentAnimal, forKey: "toUser")
-        skip.setObject("liked", forKey: "type")
-        skip.saveInBackgroundWithBlock(nil)
+        let like = PFObject(className: "Action")
+        like.setObject(PFUser.currentUser()!.objectId!, forKey: "byUser")
+        like.setObject(self.currentAnimal, forKey: "toUser")
+        like.setObject("liked", forKey: "type")
+        like.setObject(self.currentHost, forKey: "hostID")
+        like.saveInBackgroundWithBlock(nil)
         }
     }
     

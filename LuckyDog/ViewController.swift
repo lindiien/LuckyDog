@@ -8,11 +8,12 @@
 
 import UIKit
 
+    let pageController = ViewController(transitionStyle: UIPageViewControllerTransitionStyle.Scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.Horizontal, options: nil)
+
 class ViewController: UIPageViewController, UIPageViewControllerDataSource {
     
-    
-    
-    
+    let cardsVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CardsNavController") as UIViewController
+    let chatVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LikesNavController") as UIViewController
     
 
     override func viewDidLoad() {
@@ -21,6 +22,8 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
         
         view.backgroundColor = UIColor.whiteColor()
         dataSource = self
+        
+        self.setViewControllers([cardsVC], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         
     }
 
@@ -34,15 +37,37 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        return nil
+        switch viewController {
+        case cardsVC:
+            return chatVC
+        case chatVC:
+            return cardsVC
+        default:
+            return nil
+        }
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        return nil
+        switch viewController {
+        case chatVC:
+            return cardsVC
+        case cardsVC:
+            return chatVC
+        default:
+            return nil
+        }
     }
     
+    func goToNextVC() {
+        let nextVC = pageViewController(self, viewControllerAfterViewController: viewControllers![0] as UIViewController)!
+        setViewControllers([nextVC], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+    }
     
+    func goToPreviousVC() {
+        let previousVC = pageViewController(self, viewControllerBeforeViewController: viewControllers![0] as UIViewController)!
+        setViewControllers([previousVC], direction: UIPageViewControllerNavigationDirection.Reverse, animated: true, completion: nil)
+    }
     
     
 }

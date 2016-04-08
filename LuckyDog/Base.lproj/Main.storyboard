@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LuckyDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageController" id="BYZ-38-t0r" customClass="ViewController" customModule="LuckyDog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -74,16 +75,44 @@
                                     <constraint firstAttribute="width" constant="240" id="hez-PP-KwK"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUe-YF-3e2" userLabel="NahButton">
+                                <rect key="frame" x="162.5" y="390" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="pSO-85-1Gq"/>
+                                    <constraint firstAttribute="height" constant="75" id="wqU-rt-kru"/>
+                                </constraints>
+                                <state key="normal" image="nah-button"/>
+                                <connections>
+                                    <action selector="nahButtonPressed:" destination="7m4-S7-2e6" eventType="touchUpInside" id="U1V-L7-sDC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyy-Cv-f6d" userLabel="YeahButton">
+                                <rect key="frame" x="362.5" y="390" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="7rs-IO-NYe"/>
+                                    <constraint firstAttribute="height" constant="75" id="dBp-gn-LFr"/>
+                                </constraints>
+                                <state key="normal" image="yeah-button"/>
+                                <connections>
+                                    <action selector="yeahButtonPressed:" destination="7m4-S7-2e6" eventType="touchUpInside" id="avy-io-cHZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BUe-YF-3e2" firstAttribute="centerX" secondItem="gSq-H6-tcV" secondAttribute="centerX" constant="-100" id="ERc-00-3qR"/>
+                            <constraint firstItem="BUe-YF-3e2" firstAttribute="top" secondItem="4lA-Sq-InG" secondAttribute="bottom" constant="16" id="JlG-ai-B10"/>
+                            <constraint firstItem="Kyy-Cv-f6d" firstAttribute="top" secondItem="4lA-Sq-InG" secondAttribute="bottom" constant="16" id="Lqx-So-YGM"/>
                             <constraint firstItem="4lA-Sq-InG" firstAttribute="top" secondItem="t9q-Tr-UNL" secondAttribute="bottom" constant="10" id="XGx-1Z-6Eq"/>
                             <constraint firstItem="4lA-Sq-InG" firstAttribute="centerX" secondItem="gSq-H6-tcV" secondAttribute="centerX" id="iXY-c2-d75"/>
+                            <constraint firstItem="Kyy-Cv-f6d" firstAttribute="centerX" secondItem="gSq-H6-tcV" secondAttribute="centerX" constant="100" id="uQd-3r-gjG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jos-W7-sLF"/>
                     <connections>
                         <outlet property="cardStackView" destination="4lA-Sq-InG" id="ZeU-Tx-Kjd"/>
+                        <outlet property="nahButton" destination="BUe-YF-3e2" id="Myl-bA-hmi"/>
+                        <outlet property="yeahButton" destination="Kyy-Cv-f6d" id="Put-nc-Ney"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cf7-3k-j8y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -108,5 +137,80 @@
             </objects>
             <point key="canvasLocation" x="-414" y="1070"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="EZQ-Ag-mo4">
+            <objects>
+                <tableViewController id="GP8-kt-4Mt" customClass="LikesTableViewController" customModule="LuckyDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2j5-Vl-ZT3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LikeCell" rowHeight="82" id="DfJ-g9-TAk" customClass="LikeCell" customModule="LuckyDog" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="82"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DfJ-g9-TAk" id="24J-t7-MG5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="81.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ZY-sg-CHk">
+                                            <rect key="frame" x="10" y="3" width="75" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="75" id="abB-TI-wsf"/>
+                                                <constraint firstAttribute="width" constant="75" id="bnS-zX-inW"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ms-uA-Bgf">
+                                            <rect key="frame" x="90" y="30.5" width="500" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2ms-uA-Bgf" firstAttribute="centerY" secondItem="24J-t7-MG5" secondAttribute="centerY" id="0WC-jx-UQh"/>
+                                        <constraint firstItem="2ms-uA-Bgf" firstAttribute="leading" secondItem="1ZY-sg-CHk" secondAttribute="trailing" constant="5" id="2eE-Zu-Rf8"/>
+                                        <constraint firstItem="1ZY-sg-CHk" firstAttribute="centerY" secondItem="24J-t7-MG5" secondAttribute="centerY" id="4Gl-5V-Nlk"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2ms-uA-Bgf" secondAttribute="trailing" constant="2" id="Jh3-iR-Rr5"/>
+                                        <constraint firstItem="1ZY-sg-CHk" firstAttribute="leading" secondItem="24J-t7-MG5" secondAttribute="leadingMargin" constant="2" id="Mes-aD-oLx"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="1ZY-sg-CHk" id="0bm-5r-xmh"/>
+                                    <outlet property="nameLabel" destination="2ms-uA-Bgf" id="tif-sJ-B2B"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GP8-kt-4Mt" id="XMV-QR-QKa"/>
+                            <outlet property="delegate" destination="GP8-kt-4Mt" id="S7Z-UX-eXm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="J1a-VY-4fF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8C-s9-ZHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="1819"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NN4-Nn-xsW">
+            <objects>
+                <navigationController storyboardIdentifier="LikesNavController" id="dca-Hp-odW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mMJ-1M-Bsq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GP8-kt-4Mt" kind="relationship" relationship="rootViewController" id="8TK-E4-HQe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fd2-we-Fs8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="1819"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="nah-button" width="75" height="75"/>
+        <image name="yeah-button" width="75" height="75"/>
+    </resources>
 </document>

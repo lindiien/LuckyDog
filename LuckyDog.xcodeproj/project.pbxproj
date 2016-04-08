@@ -13,6 +13,9 @@
 		0541B0141CAD9B7D004E65CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0131CAD9B7D004E65CD /* LoginViewController.swift */; };
 		0541B0171CAEE84F004E65CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0161CAEE84F004E65CD /* User.swift */; };
 		0541B0191CB2F57B004E65CD /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0181CB2F57B004E65CD /* Animal.swift */; };
+		0541B01D1CB81D9E004E65CD /* LikesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B01C1CB81D9E004E65CD /* LikesTableViewController.swift */; };
+		0541B0211CB82041004E65CD /* LikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0201CB82041004E65CD /* LikeCell.swift */; };
+		0541B0231CB841E6004E65CD /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0221CB841E6004E65CD /* Like.swift */; };
 		05DC875D1CAD846700A1A7F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */; };
 		05DC875F1CAD846700A1A7F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875E1CAD846700A1A7F3 /* ViewController.swift */; };
 		05DC87621CAD846700A1A7F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DC87601CAD846700A1A7F3 /* Main.storyboard */; };
@@ -66,6 +69,9 @@
 		0541B0131CAD9B7D004E65CD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0541B0161CAEE84F004E65CD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0541B0181CB2F57B004E65CD /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		0541B01C1CB81D9E004E65CD /* LikesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesTableViewController.swift; sourceTree = "<group>"; };
+		0541B0201CB82041004E65CD /* LikeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeCell.swift; path = ../LikeCell.swift; sourceTree = "<group>"; };
+		0541B0221CB841E6004E65CD /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		05DC87591CAD846700A1A7F3 /* LuckyDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05DC875E1CAD846700A1A7F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 			children = (
 				0541B0161CAEE84F004E65CD /* User.swift */,
 				0541B0181CB2F57B004E65CD /* Animal.swift */,
+				0541B0221CB841E6004E65CD /* Like.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -251,6 +258,7 @@
 				05DC875E1CAD846700A1A7F3 /* ViewController.swift */,
 				05DC87951CAD85C900A1A7F3 /* CardsViewController.swift */,
 				0541B0131CAD9B7D004E65CD /* LoginViewController.swift */,
+				0541B01C1CB81D9E004E65CD /* LikesTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -259,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				05DC87911CAD851800A1A7F3 /* CardView.swift */,
+				0541B0201CB82041004E65CD /* LikeCell.swift */,
 				05DC87931CAD852900A1A7F3 /* SwipeView.swift */,
 			);
 			name = Views;
@@ -395,14 +404,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0541B01D1CB81D9E004E65CD /* LikesTableViewController.swift in Sources */,
 				0541B0141CAD9B7D004E65CD /* LoginViewController.swift in Sources */,
 				05DC87651CAD846700A1A7F3 /* LuckyDog.xcdatamodeld in Sources */,
 				05DC875F1CAD846700A1A7F3 /* ViewController.swift in Sources */,
 				05DC87961CAD85C900A1A7F3 /* CardsViewController.swift in Sources */,
 				0541B0171CAEE84F004E65CD /* User.swift in Sources */,
 				05DC87921CAD851800A1A7F3 /* CardView.swift in Sources */,
+				0541B0211CB82041004E65CD /* LikeCell.swift in Sources */,
 				05DC87941CAD852900A1A7F3 /* SwipeView.swift in Sources */,
 				05DC875D1CAD846700A1A7F3 /* AppDelegate.swift in Sources */,
+				0541B0231CB841E6004E65CD /* Like.swift in Sources */,
 				0541B0191CB2F57B004E65CD /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

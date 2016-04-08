@@ -15,16 +15,21 @@ struct Animal {
     var id : String
     var name : String
     var type : String
+    var gender : String
+    var age : String
+    var breed : String
+    var description : String
+    var host : String
     var image : UIImage
 
 }
 
 let sadCatImage = UIImage(named: "sadCat.jpg")
 
-let animalOne : Animal = Animal(id: "one", name: "AnimalOne", type: "sadCat", image: sadCatImage!)
+let animalOne : Animal = Animal(id: "one", name: "AnimalOne", type: "sadCat", gender : "male", age : "1", breed : "Mutt", description : "loveable", host : "Mason", image: sadCatImage!)
 
 let smilingHedgehogImage = UIImage(named: "smilingHedgehog.jpg")
 
-let animalTwo : Animal = Animal(id: "Two", name: "AnimalTwo", type: "HappyHedge", image: smilingHedgehogImage!)
+let animalTwo : Animal = Animal(id: "Two", name: "AnimalTwo", type: "HappyHedge", gender : "male", age : "1", breed : "Mutt", description : "loveable", host: "Mason", image: smilingHedgehogImage!)
 
 
