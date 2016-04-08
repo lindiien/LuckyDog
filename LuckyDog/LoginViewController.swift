@@ -63,8 +63,7 @@ class LoginViewController: UIViewController {
                                 user.saveInBackgroundWithBlock(nil)
                                 })
                         }
-                        else
-                        {
+                        else{
                             print("error \(error)")
                         }
                     })

@@ -37,6 +37,8 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     var animalIndex : Int = 0
     var currentAnimal : String = ""
     var currentHost : String = ""
+    var currentAnimalName : String = ""
+    var currentAnimalImage = UIImage(named: "sadCat.jpg")
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -60,21 +62,6 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         nahButton.setImage(UIImage(named: "nah-button-pressed"), forState: UIControlState.Highlighted)
         yeahButton.setImage(UIImage(named: "yeah-button-pressed"), forState: UIControlState.Highlighted)
         
-//        fetchUnviewedAnimals({
-//            returnedAnimals in
-//            self.animalsArray = returnedAnimals
-//            
-//                if let card = self.popCard() {
-//                    self.frontCard = card
-//                    self.cardStackView.addSubview(self.frontCard!.swipeView)
-//                }
-//                if let card = self.popCard() {
-//                    self.backCard = card
-//                    self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
-//                    self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
-//                }
-//            }
-//        )
     }
     
     override func didReceiveMemoryWarning() {
@@ -128,6 +115,8 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         
             self.currentAnimal = animalsArray[self.animalIndex].id
             self.currentHost = animalsArray[self.animalIndex].host
+            self.currentAnimalName = animalsArray[self.animalIndex].name
+            self.currentAnimalImage = animalsArray[self.animalIndex].image
      
             print("Condition two")
             self.animalIndex = 1
@@ -281,7 +270,9 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         skip.setObject(PFUser.currentUser()!.objectId!, forKey: "byUser")
         skip.setObject(self.currentAnimal, forKey: "toUser")
         skip.setObject("skipped", forKey: "type")
-        skip.setObject(self.currentHost, forKey: "hostID")
+//        skip.setObject(self.currentHost, forKey: "hostID")
+//        skip.setObject(self.currentAnimalName, forKey: "animalName")
+//        skip.setObject(self.currentAnimalImage!, forKey: "image")
         skip.saveInBackgroundWithBlock(nil)
         }
     }
@@ -293,6 +284,12 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         like.setObject(self.currentAnimal, forKey: "toUser")
         like.setObject("liked", forKey: "type")
         like.setObject(self.currentHost, forKey: "hostID")
+        like.setObject(self.currentAnimalName, forKey: "animalName")
+        
+        let imageData : NSData = UIImageJPEGRepresentation(self.currentAnimalImage!, 1.0)!
+        let imageFile = PFFile(name : "likedAnimal.jpg", data : imageData)
+            
+        like.setObject(imageFile!, forKey: "image") 
         like.saveInBackgroundWithBlock(nil)
         }
     }

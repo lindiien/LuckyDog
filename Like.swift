@@ -14,6 +14,7 @@ struct Like {
     var byUser : String
     var toUser : String
     var hostID : String
-    
+    var animalName : String
+    var image : UIImage
     
 }
