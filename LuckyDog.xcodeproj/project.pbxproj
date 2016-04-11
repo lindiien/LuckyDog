@@ -16,6 +16,7 @@
 		0541B01D1CB81D9E004E65CD /* LikesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B01C1CB81D9E004E65CD /* LikesTableViewController.swift */; };
 		0541B0211CB82041004E65CD /* LikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0201CB82041004E65CD /* LikeCell.swift */; };
 		0541B0231CB841E6004E65CD /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0221CB841E6004E65CD /* Like.swift */; };
+		058442FB1CBC184B008810A3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058442FA1CBC184B008810A3 /* ChatViewController.swift */; };
 		05DC875D1CAD846700A1A7F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */; };
 		05DC875F1CAD846700A1A7F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875E1CAD846700A1A7F3 /* ViewController.swift */; };
 		05DC87621CAD846700A1A7F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DC87601CAD846700A1A7F3 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		05DC87B21CAD887A00A1A7F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87B11CAD887A00A1A7F3 /* SystemConfiguration.framework */; };
 		05DC87B41CAD888200A1A7F3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87B31CAD888200A1A7F3 /* libz.tbd */; };
 		05DC87B61CAD888B00A1A7F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87B51CAD888B00A1A7F3 /* libsqlite3.tbd */; };
+		5019918E7B5214143EB8CAD9 /* Pods_LuckyDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8CC57C18E0F80A7C2D0059 /* Pods_LuckyDog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,7 @@
 		0541B01C1CB81D9E004E65CD /* LikesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesTableViewController.swift; sourceTree = "<group>"; };
 		0541B0201CB82041004E65CD /* LikeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeCell.swift; path = ../LikeCell.swift; sourceTree = "<group>"; };
 		0541B0221CB841E6004E65CD /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		058442FA1CBC184B008810A3 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		05DC87591CAD846700A1A7F3 /* LuckyDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05DC875E1CAD846700A1A7F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +109,9 @@
 		05DC87B31CAD888200A1A7F3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		05DC87B51CAD888B00A1A7F3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		05DC87B81CAD8A3A00A1A7F3 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		9DCC303100D97E179F9D3A58 /* Pods-LuckyDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuckyDog/Pods-LuckyDog.release.xcconfig"; sourceTree = "<group>"; };
+		C9B93D49441634818319C942 /* Pods-LuckyDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuckyDog/Pods-LuckyDog.debug.xcconfig"; sourceTree = "<group>"; };
+		FE8CC57C18E0F80A7C2D0059 /* Pods_LuckyDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 				05DC87A01CAD878C00A1A7F3 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				05DC879F1CAD878C00A1A7F3 /* ParseFacebookUtils.framework in Frameworks */,
 				05DC87A11CAD878C00A1A7F3 /* ParseTwitterUtils.framework in Frameworks */,
+				5019918E7B5214143EB8CAD9 /* Pods_LuckyDog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +177,8 @@
 				05DC87731CAD846700A1A7F3 /* LuckyDogTests */,
 				05DC877E1CAD846700A1A7F3 /* LuckyDogUITests */,
 				05DC875A1CAD846700A1A7F3 /* Products */,
+				8146CA621AB07A73C3FB1EDF /* Pods */,
+				7EEECAFAA182F83C62F31E13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,6 +268,7 @@
 				05DC87951CAD85C900A1A7F3 /* CardsViewController.swift */,
 				0541B0131CAD9B7D004E65CD /* LoginViewController.swift */,
 				0541B01C1CB81D9E004E65CD /* LikesTableViewController.swift */,
+				058442FA1CBC184B008810A3 /* ChatViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -273,6 +283,23 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		7EEECAFAA182F83C62F31E13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE8CC57C18E0F80A7C2D0059 /* Pods_LuckyDog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8146CA621AB07A73C3FB1EDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9B93D49441634818319C942 /* Pods-LuckyDog.debug.xcconfig */,
+				9DCC303100D97E179F9D3A58 /* Pods-LuckyDog.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -280,9 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05DC87841CAD846700A1A7F3 /* Build configuration list for PBXNativeTarget "LuckyDog" */;
 			buildPhases = (
+				66BFDA51808EB268609DF4F4 /* Check Pods Manifest.lock */,
 				05DC87551CAD846700A1A7F3 /* Sources */,
 				05DC87561CAD846700A1A7F3 /* Frameworks */,
 				05DC87571CAD846700A1A7F3 /* Resources */,
+				59CEF3318CD624A5C23155B2 /* Embed Pods Frameworks */,
+				7D16B9B5F1600E86D8E1D96F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,6 +429,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		59CEF3318CD624A5C23155B2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuckyDog/Pods-LuckyDog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66BFDA51808EB268609DF4F4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7D16B9B5F1600E86D8E1D96F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuckyDog/Pods-LuckyDog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		05DC87551CAD846700A1A7F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -413,6 +491,7 @@
 				05DC87921CAD851800A1A7F3 /* CardView.swift in Sources */,
 				0541B0211CB82041004E65CD /* LikeCell.swift in Sources */,
 				05DC87941CAD852900A1A7F3 /* SwipeView.swift in Sources */,
+				058442FB1CBC184B008810A3 /* ChatViewController.swift in Sources */,
 				05DC875D1CAD846700A1A7F3 /* AppDelegate.swift in Sources */,
 				0541B0231CB841E6004E65CD /* Like.swift in Sources */,
 				0541B0191CB2F57B004E65CD /* Animal.swift in Sources */,
@@ -555,6 +634,7 @@
 		};
 		05DC87851CAD846700A1A7F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9B93D49441634818319C942 /* Pods-LuckyDog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -571,6 +651,7 @@
 		};
 		05DC87861CAD846700A1A7F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DCC303100D97E179F9D3A58 /* Pods-LuckyDog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
