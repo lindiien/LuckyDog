@@ -16,7 +16,12 @@
 		0541B01D1CB81D9E004E65CD /* LikesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B01C1CB81D9E004E65CD /* LikesTableViewController.swift */; };
 		0541B0211CB82041004E65CD /* LikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0201CB82041004E65CD /* LikeCell.swift */; };
 		0541B0231CB841E6004E65CD /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541B0221CB841E6004E65CD /* Like.swift */; };
+		0542E1D31CBC3B2100DFFA6E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0542E1D21CBC3B2100DFFA6E /* libicucore.tbd */; };
+		0542E1D51CBC3B2D00DFFA6E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0542E1D41CBC3B2D00DFFA6E /* libc++.tbd */; };
+		0542E1D71CBC3BA700DFFA6E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0542E1D61CBC3BA600DFFA6E /* Message.swift */; };
 		058442FB1CBC184B008810A3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058442FA1CBC184B008810A3 /* ChatViewController.swift */; };
+		059C51051CC0104B00945BCA /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C51041CC0104B00945BCA /* RosterViewController.swift */; };
+		059C51071CC010E500945BCA /* RosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C51061CC010E400945BCA /* RosterCell.swift */; };
 		05DC875D1CAD846700A1A7F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */; };
 		05DC875F1CAD846700A1A7F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC875E1CAD846700A1A7F3 /* ViewController.swift */; };
 		05DC87621CAD846700A1A7F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DC87601CAD846700A1A7F3 /* Main.storyboard */; };
@@ -30,9 +35,7 @@
 		05DC87961CAD85C900A1A7F3 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC87951CAD85C900A1A7F3 /* CardsViewController.swift */; };
 		05DC879D1CAD878C00A1A7F3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87971CAD878C00A1A7F3 /* Bolts.framework */; };
 		05DC879E1CAD878C00A1A7F3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87981CAD878C00A1A7F3 /* Parse.framework */; };
-		05DC879F1CAD878C00A1A7F3 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87991CAD878C00A1A7F3 /* ParseFacebookUtils.framework */; };
 		05DC87A01CAD878C00A1A7F3 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC879A1CAD878C00A1A7F3 /* ParseFacebookUtilsV4.framework */; };
-		05DC87A11CAD878C00A1A7F3 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC879B1CAD878C00A1A7F3 /* ParseTwitterUtils.framework */; };
 		05DC87A21CAD878C00A1A7F3 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC879C1CAD878C00A1A7F3 /* ParseUI.framework */; };
 		05DC87A41CAD884B00A1A7F3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87A31CAD884B00A1A7F3 /* AudioToolbox.framework */; };
 		05DC87A61CAD884F00A1A7F3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87A51CAD884F00A1A7F3 /* CFNetwork.framework */; };
@@ -44,6 +47,7 @@
 		05DC87B21CAD887A00A1A7F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87B11CAD887A00A1A7F3 /* SystemConfiguration.framework */; };
 		05DC87B41CAD888200A1A7F3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87B31CAD888200A1A7F3 /* libz.tbd */; };
 		05DC87B61CAD888B00A1A7F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DC87B51CAD888B00A1A7F3 /* libsqlite3.tbd */; };
+		05E659351D09DC0C00AC0F0E /* AddAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E659341D09DC0C00AC0F0E /* AddAnimalViewController.swift */; };
 		5019918E7B5214143EB8CAD9 /* Pods_LuckyDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8CC57C18E0F80A7C2D0059 /* Pods_LuckyDog.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +78,12 @@
 		0541B01C1CB81D9E004E65CD /* LikesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesTableViewController.swift; sourceTree = "<group>"; };
 		0541B0201CB82041004E65CD /* LikeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeCell.swift; path = ../LikeCell.swift; sourceTree = "<group>"; };
 		0541B0221CB841E6004E65CD /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		0542E1D21CBC3B2100DFFA6E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		0542E1D41CBC3B2D00DFFA6E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		0542E1D61CBC3BA600DFFA6E /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		058442FA1CBC184B008810A3 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		059C51041CC0104B00945BCA /* RosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterViewController.swift; sourceTree = "<group>"; };
+		059C51061CC010E400945BCA /* RosterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterCell.swift; sourceTree = "<group>"; };
 		05DC87591CAD846700A1A7F3 /* LuckyDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DC875C1CAD846700A1A7F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05DC875E1CAD846700A1A7F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,9 +103,7 @@
 		05DC87951CAD85C900A1A7F3 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		05DC87971CAD878C00A1A7F3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		05DC87981CAD878C00A1A7F3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		05DC87991CAD878C00A1A7F3 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		05DC879A1CAD878C00A1A7F3 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		05DC879B1CAD878C00A1A7F3 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
 		05DC879C1CAD878C00A1A7F3 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		05DC87A31CAD884B00A1A7F3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		05DC87A51CAD884F00A1A7F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -109,6 +116,7 @@
 		05DC87B31CAD888200A1A7F3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		05DC87B51CAD888B00A1A7F3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		05DC87B81CAD8A3A00A1A7F3 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		05E659341D09DC0C00AC0F0E /* AddAnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAnimalViewController.swift; sourceTree = "<group>"; };
 		9DCC303100D97E179F9D3A58 /* Pods-LuckyDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuckyDog/Pods-LuckyDog.release.xcconfig"; sourceTree = "<group>"; };
 		C9B93D49441634818319C942 /* Pods-LuckyDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuckyDog/Pods-LuckyDog.debug.xcconfig"; sourceTree = "<group>"; };
 		FE8CC57C18E0F80A7C2D0059 /* Pods_LuckyDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +127,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0542E1D51CBC3B2D00DFFA6E /* libc++.tbd in Frameworks */,
+				0542E1D31CBC3B2100DFFA6E /* libicucore.tbd in Frameworks */,
 				05DC87B61CAD888B00A1A7F3 /* libsqlite3.tbd in Frameworks */,
 				05DC87B41CAD888200A1A7F3 /* libz.tbd in Frameworks */,
 				0541B0111CAD98DA004E65CD /* FBSDKLoginKit.framework in Frameworks */,
@@ -136,8 +146,6 @@
 				05DC879E1CAD878C00A1A7F3 /* Parse.framework in Frameworks */,
 				05DC879D1CAD878C00A1A7F3 /* Bolts.framework in Frameworks */,
 				05DC87A01CAD878C00A1A7F3 /* ParseFacebookUtilsV4.framework in Frameworks */,
-				05DC879F1CAD878C00A1A7F3 /* ParseFacebookUtils.framework in Frameworks */,
-				05DC87A11CAD878C00A1A7F3 /* ParseTwitterUtils.framework in Frameworks */,
 				5019918E7B5214143EB8CAD9 /* Pods_LuckyDog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +173,7 @@
 				0541B0161CAEE84F004E65CD /* User.swift */,
 				0541B0181CB2F57B004E65CD /* Animal.swift */,
 				0541B0221CB841E6004E65CD /* Like.swift */,
+				0542E1D61CBC3BA600DFFA6E /* Message.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -244,9 +253,7 @@
 				05DC87A31CAD884B00A1A7F3 /* AudioToolbox.framework */,
 				05DC87971CAD878C00A1A7F3 /* Bolts.framework */,
 				05DC87981CAD878C00A1A7F3 /* Parse.framework */,
-				05DC87991CAD878C00A1A7F3 /* ParseFacebookUtils.framework */,
 				05DC879A1CAD878C00A1A7F3 /* ParseFacebookUtilsV4.framework */,
-				05DC879B1CAD878C00A1A7F3 /* ParseTwitterUtils.framework */,
 				05DC879C1CAD878C00A1A7F3 /* ParseUI.framework */,
 			);
 			name = Frameworks;
@@ -269,6 +276,8 @@
 				0541B0131CAD9B7D004E65CD /* LoginViewController.swift */,
 				0541B01C1CB81D9E004E65CD /* LikesTableViewController.swift */,
 				058442FA1CBC184B008810A3 /* ChatViewController.swift */,
+				059C51041CC0104B00945BCA /* RosterViewController.swift */,
+				05E659341D09DC0C00AC0F0E /* AddAnimalViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -278,6 +287,7 @@
 			children = (
 				05DC87911CAD851800A1A7F3 /* CardView.swift */,
 				0541B0201CB82041004E65CD /* LikeCell.swift */,
+				059C51061CC010E400945BCA /* RosterCell.swift */,
 				05DC87931CAD852900A1A7F3 /* SwipeView.swift */,
 			);
 			name = Views;
@@ -286,6 +296,8 @@
 		7EEECAFAA182F83C62F31E13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0542E1D41CBC3B2D00DFFA6E /* libc++.tbd */,
+				0542E1D21CBC3B2100DFFA6E /* libicucore.tbd */,
 				FE8CC57C18E0F80A7C2D0059 /* Pods_LuckyDog.framework */,
 			);
 			name = Frameworks;
@@ -487,14 +499,18 @@
 				05DC87651CAD846700A1A7F3 /* LuckyDog.xcdatamodeld in Sources */,
 				05DC875F1CAD846700A1A7F3 /* ViewController.swift in Sources */,
 				05DC87961CAD85C900A1A7F3 /* CardsViewController.swift in Sources */,
+				059C51051CC0104B00945BCA /* RosterViewController.swift in Sources */,
 				0541B0171CAEE84F004E65CD /* User.swift in Sources */,
 				05DC87921CAD851800A1A7F3 /* CardView.swift in Sources */,
 				0541B0211CB82041004E65CD /* LikeCell.swift in Sources */,
 				05DC87941CAD852900A1A7F3 /* SwipeView.swift in Sources */,
+				059C51071CC010E500945BCA /* RosterCell.swift in Sources */,
 				058442FB1CBC184B008810A3 /* ChatViewController.swift in Sources */,
 				05DC875D1CAD846700A1A7F3 /* AppDelegate.swift in Sources */,
 				0541B0231CB841E6004E65CD /* Like.swift in Sources */,
 				0541B0191CB2F57B004E65CD /* Animal.swift in Sources */,
+				05E659351D09DC0C00AC0F0E /* AddAnimalViewController.swift in Sources */,
+				0542E1D71CBC3BA700DFFA6E /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

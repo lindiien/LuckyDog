@@ -192,6 +192,131 @@
             </objects>
             <point key="canvasLocation" x="305" y="1819"/>
         </scene>
+        <!--Animal Roster-->
+        <scene sceneID="MK6-pz-pZV">
+            <objects>
+                <tableViewController id="qGI-0k-IzQ" customClass="RosterViewController" customModule="LuckyDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" id="IKA-8p-nTu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RosterCell" rowHeight="82" id="Cok-ve-PQI" customClass="RosterCell" customModule="LuckyDog" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="82"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cok-ve-PQI" id="bgV-na-TrP">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="81.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uYr-VH-EkX">
+                                            <rect key="frame" x="10" y="3" width="75" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="6gz-AP-UlE"/>
+                                                <constraint firstAttribute="height" constant="75" id="Hj8-NY-Mtk"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pG-vF-qF1">
+                                            <rect key="frame" x="90" y="30" width="435" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lq-5V-SjD" userLabel="Delete Button">
+                                            <rect key="frame" x="527" y="11" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="XnO-qR-Vui"/>
+                                                <constraint firstAttribute="height" constant="60" id="jMD-EB-Hlw"/>
+                                            </constraints>
+                                            <state key="normal" image="deleteButton"/>
+                                            <connections>
+                                                <action selector="deleteButtonPressed:" destination="qGI-0k-IzQ" eventType="touchUpInside" id="2T7-ri-uol"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9Lq-5V-SjD" firstAttribute="leading" secondItem="5pG-vF-qF1" secondAttribute="trailing" constant="29" id="8bS-dY-Hhj"/>
+                                        <constraint firstItem="5pG-vF-qF1" firstAttribute="centerY" secondItem="bgV-na-TrP" secondAttribute="centerY" id="99o-Ur-74H"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="9Lq-5V-SjD" secondAttribute="trailing" constant="5" id="GBn-Zw-Faj"/>
+                                        <constraint firstItem="uYr-VH-EkX" firstAttribute="leading" secondItem="bgV-na-TrP" secondAttribute="leadingMargin" constant="2" id="dmN-xY-U8N"/>
+                                        <constraint firstItem="9Lq-5V-SjD" firstAttribute="centerY" secondItem="5pG-vF-qF1" secondAttribute="centerY" id="hOZ-Fv-q3m"/>
+                                        <constraint firstItem="uYr-VH-EkX" firstAttribute="centerY" secondItem="bgV-na-TrP" secondAttribute="centerY" id="nRy-g6-lkP"/>
+                                        <constraint firstItem="5pG-vF-qF1" firstAttribute="leading" secondItem="uYr-VH-EkX" secondAttribute="trailing" constant="5" id="vBv-Ub-a0x"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="uYr-VH-EkX" id="lC1-h8-z7f"/>
+                                    <outlet property="deleteButton" destination="9Lq-5V-SjD" id="udf-yt-ffH"/>
+                                    <outlet property="nameLabel" destination="5pG-vF-qF1" id="CuO-rj-sNr"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qGI-0k-IzQ" id="phd-NB-img"/>
+                            <outlet property="delegate" destination="qGI-0k-IzQ" id="eRT-ts-hYS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Animal Roster" id="1nN-g8-kp8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IxU-eV-zuu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="2523"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h7G-JP-FIy">
+            <objects>
+                <navigationController storyboardIdentifier="NewAnimalNavController" id="aON-Z4-WMH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RkO-i1-XOz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Rnk-dC-dpO" kind="relationship" relationship="rootViewController" id="q0b-zw-bva"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDd-iK-IIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="3233"/>
+        </scene>
+        <!--Add Animal View Controller-->
+        <scene sceneID="JYv-Ng-qOl">
+            <objects>
+                <viewController id="Rnk-dC-dpO" customClass="AddAnimalViewController" customModule="LuckyDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a1m-Kl-r0r"/>
+                        <viewControllerLayoutGuide type="bottom" id="uPc-Pp-3YP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PJe-BE-gIK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="D27" translatesAutoresizingMaskIntoConstraints="NO" id="cHs-GV-mJQ">
+                                <rect key="frame" x="45" y="124" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QQQ-HF-VCd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHX-I2-M6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="3233"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KID-Lb-1yg">
+            <objects>
+                <navigationController storyboardIdentifier="RosterNavController" id="l1k-LE-B80" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1N5-jz-Xy0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qGI-0k-IzQ" kind="relationship" relationship="rootViewController" id="iiJ-cQ-iL6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTt-Sy-RCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="2523"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="NN4-Nn-xsW">
             <objects>
@@ -210,6 +335,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="D27" width="300" height="300"/>
+        <image name="deleteButton" width="30" height="30"/>
         <image name="nah-button" width="75" height="75"/>
         <image name="yeah-button" width="75" height="75"/>
     </resources>

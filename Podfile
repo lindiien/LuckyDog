@@ -4,6 +4,7 @@ use_frameworks!
 target 'LuckyDog' do
 
 pod 'JSQMessagesViewController'
+pod ‘Firebase’
 
 end
 

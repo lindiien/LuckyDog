@@ -10,3 +10,4 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 #import "JSQMessagesViewController/JSQMessages.h"
+#import <Firebase/Firebase.h>

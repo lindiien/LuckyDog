@@ -14,6 +14,8 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     let cardsVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CardsNavController") as UIViewController
     let chatVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LikesNavController") as UIViewController
+    let rosterVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("RosterNavController") as UIViewController
+    let addAnimalVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("NewAnimalNavController") as UIViewController
     
 
     override func viewDidLoad() {
@@ -39,21 +41,24 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
         
         switch viewController {
         case cardsVC:
-            return chatVC
+            return rosterVC
         case chatVC:
             return cardsVC
+        case rosterVC:
+            return addAnimalVC
         default:
             return nil
         }
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        
         switch viewController {
-        case chatVC:
+        case rosterVC:
             return cardsVC
         case cardsVC:
             return chatVC
+        case addAnimalVC:
+            return rosterVC
         default:
             return nil
         }

@@ -46,7 +46,7 @@ class LikesTableViewController: UITableViewController {
     }
     
     func goToPriorVC(button: UIBarButtonItem) {
-        pageController.goToNextVC()
+        pageController.goToPreviousVC()
     }
     
     func fetchLikedAnimals () -> () {
@@ -112,8 +112,6 @@ class LikesTableViewController: UITableViewController {
         
         let like = self.likeArray[indexPath.row].likeID
         
-        
-        
         cell.nameLabel.text = likeArray[indexPath.row].animalName
        
         cell.avatarImageView.image = likeArray[indexPath.row].image
@@ -125,6 +123,11 @@ class LikesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let vc = ChatViewController()
+        
+        let like = likeArray[indexPath.row]
+        vc.likeID = like.likeID
+        vc.title = like.byUser
+        
         navigationController?.pushViewController(vc, animated: true)
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)

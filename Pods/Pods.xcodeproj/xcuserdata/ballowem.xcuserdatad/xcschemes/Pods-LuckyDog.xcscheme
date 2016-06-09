@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B3BA150E36F60D6872992BFA'
+               BlueprintIdentifier = '79096BEE8DEA5396A634370C'
                BlueprintName = 'Pods-LuckyDog'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_LuckyDog.framework'>
